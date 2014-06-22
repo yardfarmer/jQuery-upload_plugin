@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <script src="../script/jquery-1.8.0.min.js"></script>
+    <script src="../src/jquery.upload.v2.js"></script>
+</head>
+<body>
+        <input type="button" value="upload" id="file_input"/>
+<script>
+    $(function(){
+        $("#file_input").upload({
+            action: "",              // upload path
+            fileName: "file",        // filename
+            params: {},              // additioanal params
+            accept: ".jpg,.png",     // file type
+            complete: function () {  // success callback
+                alert("complete");
+            },
+            submit: function () {    // on submit event handler
+                alert("submit");
+            }
+        });
+    })
+</script>
+</body>
+</html>
